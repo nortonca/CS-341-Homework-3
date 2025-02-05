@@ -5,40 +5,7 @@
   <title>Cheesecake Order Form</title>
   <link rel="stylesheet" href="stylesheets/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      // Form validation
-      $('#orderButton').click(function() {
-        const notes = $('textarea').val().toLowerCase();
-        if (notes.includes('vegan')) {
-          alert('Warning: Our cheesecakes contain dairy!');
-        } else {
-          const quantity = $('select[name="quantity"]').val();
-          const topping = $('input[name="topping"]:checked').parent().text().trim();
-          const orderDetails = `<p>Thank you! Your order has been placed</p>
-                              <p>Quantity: ${quantity}</p>
-                              <p>Topping: ${topping}</p>
-                              <p>Notes: ${notes}</p>`;
-          $('form').html(orderDetails);
-        }
-      });
-
-      // Month dropdown functionality
-      $('.dropdown-trigger').on('mouseover', function() {
-        $('.month-dropdown').show();
-      });
-
-      $('.month-dropdown').mouseleave(function() {
-        $(this).hide();
-     });
-
-      $('.month-select').click(function() {
-        const month = $(this).text();
-        $('#month-display').text(month);
-        $('.month-dropdown').hide();
-      });
-    });
-  </script>
+  <script src="javascripts/orderForm.js"></script>
 </head>
 <body>
   <div class="container">
