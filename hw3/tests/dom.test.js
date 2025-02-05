@@ -1,4 +1,12 @@
+
 const fs = require('fs');
+const $ = require('jquery');
+
+// Set up the window object for jQuery
+const { JSDOM } = require('jsdom');
+const dom = new JSDOM('<!DOCTYPE html><html><body></body></html>');
+global.window = dom.window;
+global.document = dom.window.document;
 
 test('test selectEvent', () => {
   //Read the index.html file into a string
@@ -7,7 +15,6 @@ test('test selectEvent', () => {
   
   //put the HTML into a testing DOM and do a sanity check
   document.body.innerHTML = html;
-  const $ = require('jquery');
   expect($('h1').html()).toBe("Cheesecake Order Form");
 });
 
@@ -15,7 +22,6 @@ test('test selectEvent', () => {
 test('test form elements exist', () => {
   var html = fs.readFileSync('public/index.html', 'utf8');
   document.body.innerHTML = html;
-  const $ = require('jquery');
   
   expect($('select[name="quantity"]').length).toBe(1);
   expect($('input[name="topping"]').length).toBe(3);
