@@ -1,5 +1,13 @@
 
-// Event handlers
+/**
+ * Event handlers for the cheesecake order form
+ * These functions manage order submission and month selection functionality
+ */
+
+/**
+ * Handles the order form submission
+ * Checks for vegan requests and displays order confirmation
+ */
 const handleOrder = function() {
   const notes = $('textarea').val().toLowerCase();
   if (notes.includes('vegan')) {

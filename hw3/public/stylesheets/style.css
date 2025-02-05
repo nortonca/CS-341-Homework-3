@@ -1,5 +1,16 @@
-/* Created by: Corwin Carr */
-/* Import Google Fonts */
+/*
+ * Cheesecake Order Form Styles
+ * Created by: Corwin Carr
+ * 
+ * Contents:
+ * 1. Font imports
+ * 2. General layout
+ * 3. Form elements
+ * 4. Interactive elements
+ * 5. Month dropdown
+ */
+
+/* 1. Font imports */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap');
 
 body {
