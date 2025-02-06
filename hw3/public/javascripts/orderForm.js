@@ -1,5 +1,6 @@
 
 /**
+ * @author: Corwin Carr
  * Event handlers for the cheesecake order form
  * These functions manage order submission and month selection functionality
  */
